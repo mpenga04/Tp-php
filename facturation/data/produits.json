@@ -1,0 +1,10 @@
+[
+    {
+        "code_barre": "080819822797",
+        "nom": "biscuit",
+        "prix_unitaire_ht": 100,
+        "date_expiration": "2033-06-22",
+        "quantite_stock": 396,
+        "date_enregistrement": "2026-04-22"
+    }
+]

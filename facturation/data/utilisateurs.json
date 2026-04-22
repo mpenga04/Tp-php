@@ -1,0 +1,26 @@
+[
+    {
+        "identifiant": "admin",
+        "mot_de_passe": "$2y$10$qLtCf4xXvyg88\/CZGpDGFeQF7jzmbCS6tAoGlcps6zmkD\/JSegfB2",
+        "role": "super_admin",
+        "nom_complet": "Adminitacteur",
+        "date_creation": "2026-04-22",
+        "actif": true
+    },
+    {
+        "identifiant": "benji",
+        "mot_de_passe": "$2y$10$zfI7GRLPPtgukSeBQwr3S.O1Kf7if6rso2sAvGcm3YB1KHuHUeAGS",
+        "role": "caissier",
+        "nom_complet": "benji",
+        "date_creation": "2026-04-22",
+        "actif": true
+    },
+    {
+        "identifiant": "agos",
+        "mot_de_passe": "$2y$10$uYGulE5gml82baRjOkrk\/OlNowrHNgTBs9lMxg8h9Efouj3wctcou",
+        "role": "manager",
+        "nom_complet": "agostinho",
+        "date_creation": "2026-04-22",
+        "actif": true
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "id_facture": "FAC-20260422-001",
+        "date": "2026-04-22",
+        "heure": "16:31:28",
+        "caissier": "admin.root",
+        "articles": [
+            {
+                "code_barre": "080819822797",
+                "nom": "biscuit",
+                "prix_unitaire_ht": 100,
+                "quantite": 4,
+                "sous_total_ht": 400
+            }
+        ],
+        "total_ht": 400,
+        "tva": 72,
+        "total_ttc": 472
+    }
+]
