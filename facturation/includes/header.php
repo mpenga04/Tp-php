@@ -7,9 +7,9 @@ $user = $_SESSION['user'] ?? null;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= APP_NAME ?></title>
-    <link rel="stylesheet" href="/Tp php/facturation/assets/css/style.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/style.css">
     <script src="https://unpkg.com/@zxing/library@latest"></script>
-    <script src="/Tp php/facturation/assets/js/scanner.js" defer></script>
+    <script src="<?= BASE_URL ?>/assets/js/scanner.js" defer></script>
 </head>
 <body>
 <header class="topbar">
@@ -17,7 +17,7 @@ $user = $_SESSION['user'] ?? null;
     <?php if ($user): ?>
         <div>
             <span>Bienvenue <?= htmlspecialchars((string) $user['nom_complet']) ?> (<?= htmlspecialchars((string) $user['role']) ?>)</span>
-            <a href="/Tp php/facturation/auth/logout.php">Deconnexion</a>
+            <a href="<?= BASE_URL ?>/auth/logout.php">Deconnexion</a>
         </div>
     <?php endif; ?>
 </header>

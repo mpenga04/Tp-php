@@ -9,7 +9,7 @@ SYSTEME DE FACTURATION - PHP PROCEDURAL
 - Ouvrir: http://localhost/Tp%20php/facturation/auth/login.php
 
 3) COMPTE PAR DEFAUT
-- Identifiant: admin.root
+- Identifiant: admin
 - Mot de passe: Admin@123
 
 4) ROLES

@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 save_invoices($invoices);
                 $_SESSION['last_invoice'] = $invoice;
                 $_SESSION['panier'] = [];
-                header('Location: /Tp php/facturation/modules/facturation/afficher-facture.php');
+                header('Location: ' . BASE_URL . '/modules/facturation/afficher-facture.php');
                 exit;
             }
         }
@@ -80,19 +80,19 @@ $totalTtc = $totalHt + $tva;
 include dirname(__DIR__, 2) . '/includes/header.php';
 ?>
 <nav class="menu">
-    <a href="/Tp php/facturation/modules/facturation/nouvelle-facture.php">Acceuil</a>
+    <a href="<?= BASE_URL ?>/modules/facturation/nouvelle-facture.php">Acceuil</a>
     <?php if ($user['role'] === 'caissier'): ?>    
     <?php else: ?>
-    <a href="/Tp php/facturation/modules/produits/enregistrer.php">Enregistrer produit</a>
-    <a href="/Tp php/facturation/rapports/rapport-journalier.php">Rapport journalier</a>
+    <a href="<?= BASE_URL ?>/modules/produits/enregistrer.php">Enregistrer produit</a>
+    <a href="<?= BASE_URL ?>/rapports/rapport-journalier.php">Rapport journalier</a>
     <?php endif; ?>
 
     <?php if ($user['role'] === 'caissier' || $user['role'] === 'manager'): ?>    
     <?php else: ?>
-    <a href="/Tp php/facturation/modules/admin/gestion-comptes.php">Gestion comptes</a>
+    <a href="<?= BASE_URL ?>/modules/admin/gestion-comptes.php">Gestion comptes</a>
     <?php endif; ?>
 
-    <a href="/Tp php/facturation/modules/produits/liste.php">Liste produits</a>
+    <a href="<?= BASE_URL ?>/modules/produits/liste.php">Liste produits</a>
 </nav>
 <section class="card">
     <h2>Nouvelle facture</h2>

@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ];
         save_users($users);
         $_SESSION['flash_ok'] = 'Compte cree.';
-        header('Location: /Tp php/facturation/modules/admin/gestion-comptes.php');
+        header('Location: ' . BASE_URL . '/modules/admin/gestion-comptes.php');
         exit;
     }
 }

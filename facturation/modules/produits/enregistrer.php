@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ];
         save_products($products);
         $_SESSION['flash_ok'] = 'Produit enregistre avec succes.';
-        header('Location: /Tp php/facturation/modules/produits/liste.php');
+        header('Location: ' . BASE_URL . '/modules/produits/liste.php');
         exit;
     }
 }
@@ -46,19 +46,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 include dirname(__DIR__, 2) . '/includes/header.php';
 ?>
 <nav class="menu">
-    <a href="/Tp php/facturation/index.php">Acceuil</a>
-    <a href="/Tp php/facturation/modules/facturation/nouvelle-facture.php">Nouvelle facture</a>
+    <a href="<?= BASE_URL ?>/index.php">Acceuil</a>
+    <a href="<?= BASE_URL ?>/modules/facturation/nouvelle-facture.php">Nouvelle facture</a>
     <?php if ($user['role'] === 'caissier'): ?>    
     <?php else: ?>
-    <a href="/Tp php/facturation/rapports/rapport-journalier.php">Rapport journalier</a>
+    <a href="<?= BASE_URL ?>/rapports/rapport-journalier.php">Rapport journalier</a>
     <?php endif; ?>
 
     <?php if ($user['role'] === 'caissier' || $user['role'] === 'manager'): ?>    
     <?php else: ?>
-    <a href="/Tp php/facturation/modules/admin/gestion-comptes.php">Gestion comptes</a>
+    <a href="<?= BASE_URL ?>/modules/admin/gestion-comptes.php">Gestion comptes</a>
     <?php endif; ?>
 
-    <a href="/Tp php/facturation/modules/produits/liste.php">Liste produits</a>
+    <a href="<?= BASE_URL ?>/modules/produits/liste.php">Liste produits</a>
 </nav>
 <section class="card">
     <h2>Enregistrer un produit</h2>

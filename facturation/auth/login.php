@@ -5,7 +5,7 @@ require_once dirname(__DIR__) . '/includes/fonctions-auth.php';
 require_once dirname(__DIR__) . '/auth/session.php';
 
 if (current_user()) {
-    header('Location: /Tp php/facturation/index.php');
+    header('Location: ' . BASE_URL . '/index.php');
     exit;
 }
 
@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user = authenticate_user($identifiant, $password);
     if ($user) {
         $_SESSION['user'] = $user;
-        header('Location: /Tp php/facturation/index.php');
+        header('Location: ' . BASE_URL . '/index.php');
         exit;
     }
     $error = 'Identifiants invalides ou compte inactif.';
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Connexion</title>
-    <link rel="stylesheet" href="/Tp php/facturation/assets/css/style.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/style.css">
 </head>
 <body>
 <main class="container">

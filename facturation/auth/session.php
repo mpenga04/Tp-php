@@ -15,7 +15,7 @@ function current_user(): ?array
 function require_login(): void
 {
     if (!current_user()) {
-        header('Location: /Tp php/facturation/auth/login.php');
+        header('Location: ' . BASE_URL . '/auth/login.php');
         exit;
     }
 }
@@ -26,7 +26,7 @@ function require_role(string $minimumRole): void
     $user = current_user();
     if (!$user || role_rank((string) $user['role']) < role_rank($minimumRole)) {
         $_SESSION['flash_error'] = 'Acces non autorise.';
-        header('Location: /Tp php/facturation/index.php');
+        header('Location: ' . BASE_URL . '/index.php');
         exit;
     }
 }
